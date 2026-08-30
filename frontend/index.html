@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>七彩星光（shuxiseonzn）仪表盘</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-carousel">
+    <div class="bg-slide" style="background-image: url('../assets/bg1.png')"></div>
+    <div class="bg-slide" style="background-image: url('../assets/bg2.png')"></div>
+    <div class="bg-slide" style="background-image: url('../assets/bg3.png')"></div>
+  </div>
+
+  <div class="app">
+    <header>
+      <img class="logo" src="../assets/icon.png" alt="七彩星光 图标" />
+      <h1>七彩星光 数据分析器</h1>
+    </header>
+
+    <main>
+      <section class="controls">
+        <button id="start-scan">开始抓取（测试模式）</button>
+        <button id="export-txt">导出 TXT（500 条/文件）</button>
+        <span class="note">请先在 .env 填写 SAMPLE_URL 或配置 OZON_API_KEY</span>
+      </section>
+
+      <section class="results">
+        <h2>筛选候选（示例）</h2>
+        <table id="results-table">
+          <thead>
+            <tr><th>名称</th><th>价格</th><th>购物车转化</th><th>退货率</th><th>已售</th><th>操作</th></tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="6">暂无数据，点击“开始抓取”以测试</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <footer>
+      <small>七彩星光（shuxiseonzn） — 私有仓库示例。图像由 assets/ 下的 bg1.png/bg2.png/bg3.png 与 icon.png 提供。</small>
+    </footer>
+  </div>
+
+  <script>
+    // 简易交互：触发后调用后端 API（本地示例）
+    document.getElementById('start-scan').addEventListener('click', () => {
+      alert('示例模式：请在本地运行 python scraper.py 并把结果放入 DB，然后刷新此页面。');
+    });
+    document.getElementById('export-txt').addEventListener('click', () => {
+      alert('导出示例：在本地执行 python exporter.py 来生成 exports/ 下的 txt 文件。');
+    });
+  </script>
+</body>
+</html>

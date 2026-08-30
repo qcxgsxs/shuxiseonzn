@@ -1,10 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "七彩星光 - ��卖助手（示例）",
+  "name": "七彩星光 - 跟卖助手（示例）",
   "version": "0.1",
   "description": "在 Ozon 卖家后台打开跟卖页面时，预填跟卖价格/图片/描述草稿（需用户人工提交）。",
   "permissions": ["activeTab", "scripting", "storage"],
   "host_permissions": ["https://seller.ozon.ru/*", "https://*.ozon.ru/*"],
+  "icons": {
+    "16": "../assets/icon-16.png",
+    "48": "../assets/icon-48.png",
+    "128": "../assets/icon-128.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://seller.ozon.ru/*", "https://*.ozon.ru/*"],
