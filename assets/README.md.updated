@@ -1,0 +1,14 @@
+assets/README.md
+
+说明更新：我已添加 image_utils.py 脚本到仓库根目录，用于从你上传的 assets/icon.png 生成多尺寸图标（icon-16.png, icon-48.png, icon-128.png, icon-512.png）。
+
+使用方法：
+1. 确认 assets/icon.png, assets/bg1.png, assets/bg2.png, assets/bg3.png 已存在并已 push 到仓库。
+2. 在仓库根目录创建并激活 Python 虚拟环境，然后安装 Pillow：
+   pip install Pillow
+3. 运行：
+   python image_utils.py
+
+此脚本会在 assets/ 下生成 icon-16.png / icon-48.png / icon-128.png / icon-512.png（默认不覆盖已存在文件）。
+
+如果你希望我代为生成并提交这些多尺寸图标，请回复“请你生成并提交”，我会在你授权后把生成的图标 push 到仓库（但我不能直接在你的私有��片上操作，需你授予或自行运行脚本）。
